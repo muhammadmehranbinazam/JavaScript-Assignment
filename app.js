@@ -351,6 +351,206 @@ document.write("The Area is :"+2*pi*parseInt(radius)*parseInt(radius)+"<br>");
 
 
 
+// 13. The Lifetime Supply Calculator: Ever wonder how
+// much a “lifetime supply” of your favorite snack is?
+// Wonder no more.
+// a. Store your favorite snack into a variable
+// b. Store your current age into a variable.
+// c. Store a maximum age into a variable.
+// d. Store an estimated amount per day (as a number).
+// e. Calculate how many would you eat total for the rest of
+// your life.
+// Output the result to the screen like so: “You will need
+// NNNN to last you until the ripe old age of NN”.
+
+
+var snack=prompt("Enter your favourit snack:");
+var current=prompt('Current Age: ');
+var max_age=prompt("Enter max age: ");
+var amount=prompt("Enter per day snack eat amount:");
+document.write("<h1>The lifetime Supply Calculator</h1>");
+document.write("Favourity snack : "+snack+"<br>");
+document.write("current age : "+current+"<br>");
+document.write("Estimated max age : "+max_age+"<br>");
+document.write("Amount of Snack per day : "+amount+"<br>");
+document.write("Favourity snack : "+snack+"<br>");
+new_age=parseInt(max_age)-parseInt(current+"<br>");
+ans=parseInt(amount)*parseInt(new_age);
+document.write("You will need "+ans+" "+snack+" to last you untill the ripe old age of "+max_age+"<br>");
+
+
+// chapter 6-9
+
+
+// 1. Write a program to take a number in a variable, do the
+// required arithmetic to display the following result in your
+// browser:
+
+var number=prompt("Enter a number :");
+document.write("Result"+"<br>");
+document.write("The vale of a is :"+number+"<br>");
+document.write(".................................<br>");
+++number;
+document.write("The vale of ++a is :"+number+"<br>");
+document.write("Now the value of a is  :"+number+"<br><br><br>");
+number++;
+document.write("The vale of a++ is :"+number+"<br>");
+document.write("Now the value of a is  :"+number+"<br><br><br>");
+--number;
+document.write("The vale of --a is :"+number+"<br>");
+document.write("Now the value of a is  :"+number+"<br><br><br>");
+number--;
+document.write("The vale of a-- is :"+number+"<br>");
+document.write("Now the value of a is  :"+number+"<br><br><br>");
+
+// 2. What will be the output in variables a, b & result after
+// execution of the following script:
+// var a = 2, b = 1;
+// var result = --a - --b + ++b + b--;
+// Explain the output at each stage:
+// --a;
+// --a - --b;
+// --a - --b + ++b;
+// --a - --b + ++b + b--;
+var a = 2, b = 1;
+result=--a;
+document.write(result+"<br>");
+document.write("--a means first the value of a is decresed by 1 and then show in output <br>");
+result=--a- --b;
+document.write(result+"<br>");
+document.write("--a means first the value of a is decresed by 1 and --b represent that the value of b is decreased by 1 and than b minus from a and show output<br>");
+result=--a- --b + ++b;
+document.write(result+"<br>");
+document.write("--a means first the value of a is decresed by 1 and --b represent that the value of b is decreased by 1 and then value of b increase by 1 and  than b minus from a and and add the value of b show output<br>");
+result=--a - --b + ++b + b--;
+document.write(result+"<br>");
+document.write("--a means first the value of a is decresed by 1 and --b represent that the value of b is decreased by 1  and then value of b increase by 1 and and after assigning the value of b then decrease by 1  than b minus from a and and add the value of b show output<br>");
+
+
+// 3. Write a program that takes input a name from user &
+// greet the user
+var name=prompt("Enter your name :");
+document.write("Welcomt "+name+"<br>");
+
+
+// 5. Write a program to take input a number from user &
+// display it’s multiplication table on your browser. If user
+// does not enter a new number, multiplication table of 5
+// should be displayed by default
+
+var number=5;
+number=prompt("Enter a number for table :");
+if (number==""){
+    number=5;
+for(i=0;i<=10;i++)
+{
+    document.write(number+"X"+i+"="+number*i+"<br>");
+}
+}
+else{
+    for(i=0;i<=10;i++)
+{
+    document.write(number+"X"+i+"="+number*i+"<br>");
+}
+}
+
+// 6. Take
+// a) Take three subjects name from user and store them in 3
+// different variables.
+// b) Total marks for each subject is 100, store it in another
+// variable.
+// c) Take obtained marks for first subject from user and
+// stored it in different variable.
+// d) Take obtained marks for remaining 2 subjects from user
+// and store them in variables.
+// e) Now calculate total marks and percentage and show the
+// result in browser like this.(Hint: user table)
+name1=prompt("Subject 1 name: ");
+name2=prompt("Subject 2 name: ");
+name3=prompt("Subject 3 name: ");
+total_marks=100;
+sub1=prompt("Subject 1 marks: ");
+sub2=prompt("Subject 2 marks: ");
+sub3=prompt("Subject 3 marks: ");
+document.write("<table>");
+document.write("<tr>");
+document.write("<th>");
+document.write("Subject");
+document.write("</th>");
+document.write("<th>");
+document.write("Total Marks");
+document.write("</th>");
+document.write("<th>");
+document.write("Obtained Marks");
+document.write("</th>");
+document.write("<th>");
+document.write("Percentage");
+document.write("</th>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>");
+document.write(name1);
+document.write("</td>");
+document.write("<td>");
+document.write(total_marks);
+document.write("</td>");
+document.write("<td>");
+document.write(sub1);
+document.write("</td>");
+document.write("<td>");
+document.write((parseInt(sub1)/total_marks)*100);
+document.write("</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>");
+document.write(name2);
+document.write("</td>");
+document.write("<td>");
+document.write(total_marks);
+document.write("</td>");
+document.write("<td>");
+document.write(sub2);
+document.write("</td>");
+document.write("<td>");
+document.write((parseInt(sub2)/total_marks)*100);
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td>");
+document.write(name3);
+document.write("</td>");
+document.write("<td>");
+document.write(total_marks);
+document.write("</td>");
+document.write("<td>");
+document.write(sub3);
+document.write("</td>");
+document.write("<td>");
+document.write((parseInt(sub3)/total_marks)*100);
+document.write("</td>");
+document.write("</tr>");
+document.write("<tr>");
+document.write("<td></td>");
+document.write("<td><b>"+total_marks*3+"</b></td>");
+total_a=parseInt(sub1)+parseInt(sub2)+parseInt(sub3);
+document.write("<td><b>"+total_a+"</b></td>");
+document.write("<td>"+total_a/(total_marks*3)*100+"</td>");
+document.write("</tr>");
+
+document.write("</table>");
+
+
+
+
+
+
+
+
+
+
+
 
 
 
